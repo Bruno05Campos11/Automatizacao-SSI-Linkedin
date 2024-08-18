@@ -1,0 +1,32 @@
+import pyautogui as auto
+from time import sleep
+from datetime import date
+auto.PAUSE = 1.5
+
+auto.click (x=1335, y=59)
+sleep (1)
+auto.write ("edge")
+auto.press ('ENTER')
+sleep (4)
+
+auto.hotkey ("ctrl", "t")
+sleep (3)
+
+auto.write ("https://www.linkedin.com/sales/ssi")
+auto.press ('ENTER')
+sleep (9)
+
+auto.press('f11')
+auto.hotkey ("CTRL", "-")
+auto.hotkey ("CTRL", "-")
+auto.click (x=0, y=500)
+
+#print
+data = str(date.today())
+comando = 'ssi_{}.jpg'
+comando = comando.format (data)
+imagem = auto.screenshot (comando)
+
+auto.hotkey ("CTRL", "+")
+auto.hotkey ("CTRL", "+")
+auto.hotkey ("alt", "f4")
